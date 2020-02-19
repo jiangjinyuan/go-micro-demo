@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package btccom.explorer.srv.poolHashrate;
+
+service PoolHashrate {
+	rpc GetPoolHashrate(Request) returns (Response) {}
+}
+
+message poolHashrate {
+    string createdTime = 1;
+    string pool_name = 2;
+    int32  pool_id = 3;
+    float hashrate = 4;
+    string updatedTime = 5;
+}
+
+message Request {
+	string poolID = 1;
+    string poolName = 2;
+}
+
+message Response {
+	bool success = 1;
+    Error error = 2;
+    poolHashrate poolHashrate = 3;
+}
+
+message Error {
+	int32 code = 1;
+    string detail = 2;
+}
+
