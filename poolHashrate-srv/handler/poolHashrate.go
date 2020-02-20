@@ -27,6 +27,7 @@ func (e *PoolHashrate) GetPoolHashrate(ctx context.Context, req *poolHashrate.Re
 
 	rsp.PoolHashrate = Hashrate
 	rsp.Success = true
+	log.Logf("rsp: %v",rsp)
 	return nil
 }
 

@@ -157,6 +157,7 @@ github.com/go-logfmt/logfmt v0.4.0/go.mod h1:3RMwSq7FuexP4Kalkev3ejPJsZTpXXBr9+V
 github.com/go-playground/locales v0.12.1/go.mod h1:IUMDtCfWo/w/mtMfIE/IG2K+Ey3ygWanZIBtBW0W2TM=
 github.com/go-playground/locales v0.13.0/go.mod h1:taPMhCMXrRLJO55olJkUXHZBHCxTMfnGwq/HNwmWNS8=
 github.com/go-playground/universal-translator v0.16.0/go.mod h1:1AnU7NaIRDWWzGEKwgtJRd2xk99HeFyHw3yid4rvQIY=
+github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=
 github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible/go.mod h1:qf9acutJ8cwBUhm1bqgz6Bei9/C/c93FPDljKWwsOgM=
@@ -253,6 +254,8 @@ github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200219133137-e10
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200219133137-e10410d0bb95/go.mod h1:W7mGr7qu6/6iFSHRDcxqV3OH6FzHkfcjwjA31THYUiM=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220014842-0ef7a6c405c5 h1:e1DqlsbIakFQ1Q6o0gnFgxDsjr/1TBKlrW/1EMN6E1U=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220014842-0ef7a6c405c5/go.mod h1:dOtA9IUYcdAeAj25TEjyYXe/gOjmqJ7Woi+BBuQXRf8=
+github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220031944-909119ac26cd h1:7v51ivmV3eM2aeCWC2V+oW9Cg8+Nt8UYn9mc0glN5uk=
+github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220031944-909119ac26cd/go.mod h1:EaOn/zoM78/OQbJPWM1Ta25knJvvIyxArC1Cqr/JRyo=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 github.com/jonboulle/clockwork v0.1.0 h1:VKV+ZcuP6l3yW9doeqz6ziZGgcynBVQO+obU0+0hcPo=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
