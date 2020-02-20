@@ -15,8 +15,7 @@ message poolHashrate {
 }
 
 message Request {
-	string poolID = 1;
-    string poolName = 2;
+	int32 poolID = 1;
 }
 
 message Response {

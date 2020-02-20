@@ -3,11 +3,12 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	"github.com/micro/go-micro/util/log"
 	"net/http"
 	"time"
 
-	"github.com/micro/go-micro/client"
 	poolHashrate "github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv/proto/poolHashrate"
+	"github.com/micro/go-micro/client"
 )
 
 func PoolHashrate(w http.ResponseWriter, r *http.Request) {
@@ -18,11 +19,11 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	log.Logf("request body: %v",request)
 	// call the backend service
 	poolHashrateClient := poolHashrate.NewPoolHashrateService("btccom.explorer.srv.poolHashrate", client.DefaultClient)
 	rsp, err := poolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
-		PoolID: request["poolId"].(int32),
-		PoolName: request["poolName"].(string),
+		PoolID:   request["poolId"].(int32),
 	})
 	if err != nil {
 		http.Error(w, err.Error(), 500)
@@ -31,10 +32,10 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 
 	// we want to augment the response
 	response := map[string]interface{}{
-		"msg": rsp.PoolHashrate,
+		"msg":     rsp.PoolHashrate,
 		"success": rsp.Success,
-		"error": rsp.Error,
-		"ref": time.Now().UnixNano(),
+		"error":   rsp.Error,
+		"ref":     time.Now().UnixNano(),
 	}
 
 	// encode and write the response as json

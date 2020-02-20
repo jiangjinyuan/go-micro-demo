@@ -2,9 +2,9 @@ package handler
 
 import (
 	"context"
-	"github.com/micro/go-micro/util/log"
 	pool "github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv/model/poolHashrate"
 	poolHashrate "github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv/proto/poolHashrate"
+	"github.com/micro/go-micro/util/log"
 )
 
 type PoolHashrate struct{}
@@ -14,7 +14,7 @@ var (
 )
 
 func (e *PoolHashrate) GetPoolHashrate(ctx context.Context, req *poolHashrate.Request, rsp *poolHashrate.Response) error {
-	Hashrate, err := poolHashrateService.GetPoolHashrate(req.PoolName,req.PoolID)
+	Hashrate, err := poolHashrateService.GetPoolHashrate(req.PoolID)
 	if err != nil {
 		rsp.Success = false
 		rsp.Error = &poolHashrate.Error{
@@ -39,5 +39,3 @@ func Init() {
 		return
 	}
 }
-
-

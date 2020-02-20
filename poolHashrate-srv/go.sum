@@ -181,6 +181,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i
 github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
 github.com/jiangjinyuan/go-micro-demo v0.0.0-20200219133137-e10410d0bb95 h1:oXRGad+8Mv1PZzWFPjpYFemS/nERhilzqyzrLIVSl1g=
 github.com/jiangjinyuan/go-micro-demo v0.0.0-20200219133137-e10410d0bb95/go.mod h1:qr+Pgz4LiAZz+vV5r1BI8nRktw3q2CHCj/XS15MzgBo=
+github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220014842-0ef7a6c405c5 h1:rim6l+xO/7pHd0nGaDAEZbT5jylfrTIsPrKxukHF7Uw=
+github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220014842-0ef7a6c405c5/go.mod h1:qr+Pgz4LiAZz+vV5r1BI8nRktw3q2CHCj/XS15MzgBo=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
 github.com/joncalhoun/qson v0.0.0-20170526102502-8a9cab3a62b1/go.mod h1:DFXrEwSRX0p/aSvxE21319menCBFeQO0jXpRj7LEZUA=

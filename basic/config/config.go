@@ -79,7 +79,6 @@ func Init() {
 	config.Get(defaultRootPath, "mysql").Scan(&mysqlConfig)
 	//config.Get(defaultRootPath, "redis").Scan(&redisConfig)
 
-
 	// 标记已经初始化
 	inited = true
 }

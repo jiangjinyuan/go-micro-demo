@@ -5,7 +5,7 @@ import (
 	"github.com/jiangjinyuan/go-micro-demo/basic/db"
 )
 
-func Init()  {
+func Init() {
 	config.Init()
 	db.Init()
 }

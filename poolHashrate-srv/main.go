@@ -32,7 +32,7 @@ func main() {
 			// 初始化handler
 			handler.Init()
 		}),
-		)
+	)
 
 	// Register Handler
 	poolHashrate.RegisterPoolHashrateHandler(service.Server(), new(handler.PoolHashrate))
