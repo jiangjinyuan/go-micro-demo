@@ -26,13 +26,11 @@ func main() {
 
 	// Initialise service
 	service.Init(
-		micro.Action(func(c *cli.Context) error {
+		micro.Action(func(c *cli.Context) {
 			// 初始化模型层
 			model.Init()
 			// 初始化handler
 			handler.Init()
-
-			return nil
 		}),
 		)
 

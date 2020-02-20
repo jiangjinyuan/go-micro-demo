@@ -124,11 +124,11 @@ func (m *Request) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Request proto.InternalMessageInfo
 
-func (m *Request) GetPoolID() string {
+func (m *Request) GetPoolID() int32 {
 	if m != nil {
 		return m.PoolID
 	}
-	return ""
+	return -1
 }
 
 func (m *Request) GetPoolName() string {

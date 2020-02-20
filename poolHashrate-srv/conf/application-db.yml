@@ -1,6 +1,6 @@
 app:
   mysql:
-    enabled: true
     url: root:123456@(127.0.0.1:3307)/explorer_web_main_db?charset=utf8
+    enabled: true
     maxIdleConnection: 100
     maxOpenConnection: 200
