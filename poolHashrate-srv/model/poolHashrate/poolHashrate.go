@@ -18,7 +18,7 @@ type service struct {
 // Service 用户服务类
 type Service interface {
 	// GetPoolHashrate 根据pool_name、pool_id获取hashrate
-	GetPoolHashrate(poolID string) (ret *proto.PoolHashrate, err error)
+	GetPoolHashrate(poolID int32) (ret *proto.PoolHashrate, err error)
 }
 
 // GetService 获取服务类
