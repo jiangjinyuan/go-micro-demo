@@ -13,7 +13,7 @@ import (
 
 func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 	// decode the incoming request as json
-	var request map[string]interface{}
+	var request map[string]int32
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
 		http.Error(w, err.Error(), 500)
 		return
@@ -23,7 +23,7 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 	// call the backend service
 	poolHashrateClient := poolHashrate.NewPoolHashrateService("btccom.explorer.srv.poolHashrate", client.DefaultClient)
 	rsp, err := poolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
-		PoolID:   request["poolId"].(int32),
+		PoolID:   request["poolId"],
 	})
 	if err != nil {
 		http.Error(w, err.Error(), 500)
