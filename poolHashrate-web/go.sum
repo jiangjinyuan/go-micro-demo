@@ -252,6 +252,7 @@ github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220014842-0ef7a6c405c5 h1:rim6
 github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220014842-0ef7a6c405c5/go.mod h1:qr+Pgz4LiAZz+vV5r1BI8nRktw3q2CHCj/XS15MzgBo=
 github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220053345-abd8a7da9dbb h1:JGDsHNQhkbt4V3du3GfcjCRPXYNdUSxhlwA+8FgrZg0=
 github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220053345-abd8a7da9dbb/go.mod h1:qr+Pgz4LiAZz+vV5r1BI8nRktw3q2CHCj/XS15MzgBo=
+github.com/jiangjinyuan/go-micro-demo v0.0.0-20200220060138-4a932b00d07b h1:ZEQc0uh/kRkbwp+KC9bgnmArIOyMdYqkV5FBMFEK1fc=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200219133137-e10410d0bb95 h1:KCs4Y4byU7iH/dwdWBYATPwijAdS2fmBV4X3NUhZOZ8=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200219133137-e10410d0bb95/go.mod h1:W7mGr7qu6/6iFSHRDcxqV3OH6FzHkfcjwjA31THYUiM=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220014842-0ef7a6c405c5 h1:e1DqlsbIakFQ1Q6o0gnFgxDsjr/1TBKlrW/1EMN6E1U=
@@ -262,6 +263,8 @@ github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220034821-707
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220034821-707494b79d8b/go.mod h1:EaOn/zoM78/OQbJPWM1Ta25knJvvIyxArC1Cqr/JRyo=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220053345-abd8a7da9dbb h1:YV9M1o4ywvKTM2rsj2VcSlzN1Ns/G4uOnybariPgHws=
 github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220053345-abd8a7da9dbb/go.mod h1:EaOn/zoM78/OQbJPWM1Ta25knJvvIyxArC1Cqr/JRyo=
+github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220060138-4a932b00d07b h1:G1Ah13EDuBrJI1SpIc63Nq6yfJ5hbMMU1iF386meLCQ=
+github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv v0.0.0-20200220060138-4a932b00d07b/go.mod h1:VFjNQJ0Y5PtYdbBKmA6pb6eopI24wFEHVLQ9ewJz/Ns=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 github.com/jonboulle/clockwork v0.1.0 h1:VKV+ZcuP6l3yW9doeqz6ziZGgcynBVQO+obU0+0hcPo=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=

@@ -20,10 +20,14 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Logf("request body: %v",request)
+
+	//poolId,_:= strconv.Atoi(request["poolId"].(string))
+	poolId:=request["poolId"].(float64)
+	//log.Logf("poolId: %f",poolId)
 	// call the backend service
 	poolHashrateClient := poolHashrate.NewPoolHashrateService("btccom.explorer.srv.poolHashrate", client.DefaultClient)
 	rsp, err := poolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
-		PoolID:   int32(request["poolId"].(float64)),
+		PoolID:   int32(poolId),
 	})
 	if err != nil {
 		http.Error(w, err.Error(), 500)
