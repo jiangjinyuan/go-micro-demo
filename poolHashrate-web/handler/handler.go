@@ -2,16 +2,20 @@ package handler
 
 import (
 	"context"
-	"encoding/json"
-	"github.com/micro/go-micro/util/log"
-	"net/http"
-	"time"
-
+	"github.com/gin-gonic/gin"
 	poolHashrate "github.com/jiangjinyuan/go-micro-demo/poolHashrate-srv/proto/poolHashrate"
-	"github.com/micro/go-micro/client"
+	"github.com/micro/go-micro/util/log"
 )
 
-func PoolHashrate(w http.ResponseWriter, r *http.Request) {
+var (
+	PoolHashrateClient poolHashrate.PoolHashrateService
+)
+
+type Say struct {
+
+}
+
+/*func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 	// decode the incoming request as json
 	var request map[string]interface{}
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
@@ -21,16 +25,16 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 
 	log.Logf("request body: %v",request)
 
-	//poolId,_:= strconv.Atoi(request["poolId"].(string))
-	poolId:=request["poolId"].(float64)
-	//log.Logf("poolId: %f",poolId)
+	poolId := request["poolId"].(string)
+
 	// call the backend service
-	poolHashrateClient := poolHashrate.NewPoolHashrateService("btccom.explorer.srv.poolHashrate", client.DefaultClient)
-	rsp, err := poolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
-		PoolID:   int32(poolId),
+	//poolHashrateClient := poolHashrate.NewPoolHashrateService("btccom.explorer.srv.poolHashrate", client.DefaultClient)
+	rsp, err := PoolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
+		PoolID:   poolId,
 	})
 	if err != nil {
 		http.Error(w, err.Error(), 500)
+		log.Logf("error",err)
 		return
 	}
 
@@ -47,4 +51,17 @@ func PoolHashrate(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), 500)
 		return
 	}
+}*/
+
+func (s *Say) GetPoolHashrate(ctx *gin.Context){
+	poolId := ctx.PostForm("poolId")
+	log.Logf("request poolId: %s",poolId)
+	rsp, err := PoolHashrateClient.GetPoolHashrate(context.TODO(), &poolHashrate.Request{
+		PoolID:   poolId,
+	})
+	if err!=nil{
+		ctx.JSON(500, err)
+		return
+	}
+	ctx.JSON(200,rsp)
 }

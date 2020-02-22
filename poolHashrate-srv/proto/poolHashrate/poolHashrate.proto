@@ -15,7 +15,8 @@ message poolHashrate {
 }
 
 message Request {
-	int32 poolID = 1;
+	string poolID = 1;//经过测试，在Request中的字段必须为string，int32或者int64均不好使
+    string poolName =2 ;
 }
 
 message Response {

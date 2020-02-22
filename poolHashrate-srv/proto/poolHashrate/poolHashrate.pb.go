@@ -92,7 +92,8 @@ func (m *PoolHashrate) GetUpdatedTime() string {
 }
 
 type Request struct {
-	PoolID               int32    `protobuf:"bytes,1,opt,name=poolID,proto3" json:"poolID,omitempty"`
+	PoolID               string    `protobuf:"bytes,1,opt,name=poolID,proto3" json:"poolID,omitempty"`
+	//PoolName             string    `protobuf:"bytes,1,opt,name=poolName,proto3" json:"poolName,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -123,12 +124,19 @@ func (m *Request) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Request proto.InternalMessageInfo
 
-func (m *Request) GetPoolID() int32 {
+func (m *Request) GetPoolID() string {
 	if m != nil {
 		return m.PoolID
 	}
-	return 0
+	return ""
 }
+
+/*func (m *Request) GetPoolName() string {
+	if m != nil {
+		return m.PoolName
+	}
+	return ""
+}*/
 
 type Response struct {
 	Success              bool          `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
