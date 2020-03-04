@@ -1,4 +1,4 @@
-module github.com/jiangjinyuan/go-micro-demo
+module github.com/jiangjinyuan/go-micro-demo/poolHashrate/srv
 
 go 1.13
 

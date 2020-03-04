@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: default
+  name: poolHashrate-srv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: poolHashrate-srv
+      micro: service
+  template:
+    metadata:
+      labels:
+        name: poolHashrate-srv
+        micro: service
+    spec:
+      containers:
+        - name: poolHashrate
+          command: [
+            "/poolHashrate-srv",
+          ]
+          image: poolHashrate-srv:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: poolHashrate-srv-port
+          env:
+            - name: MICRO_SERVER_ADDRESS
+              value: "0.0.0.0:8080"

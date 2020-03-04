@@ -53,6 +53,15 @@ type Say struct {
 	}
 }*/
 
+// @Summary Get poolHashrate
+// @Description get pool hashrate by pool ID
+// @Accept application/x-www-form-urlencoded
+// @Produce application/x-www-form-urlencoded
+// @Param poolId body string true "Pool ID"
+// @Success 200 {string} string "ok"
+// @Failure 400 {string} string "we need poolID"
+// @Failure 404 {string} string "Can not find ID"
+// @Router /poolHashrate [post]
 func (s *Say) GetPoolHashrate(ctx *gin.Context){
 	poolId := ctx.PostForm("poolId")
 	log.Logf("request poolId: %s",poolId)
